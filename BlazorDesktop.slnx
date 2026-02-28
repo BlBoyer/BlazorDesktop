@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="BlazorDesktop.Application/BlazorDesktop.Application.csproj" Id="b40e2b63-6926-49e5-8537-ac71dc5d5c14" />
+  <Project Path="BlazorDesktop.Domain/BlazorDesktop.Domain.csproj" Id="f869f9bf-ccd7-4d17-a7da-705153693adb" />
+  <Project Path="BlazorDesktop.Infrastructure/BlazorDesktop.Infrastructure.csproj" Id="fb598641-7ef2-477f-9a88-7a59dd8b895f" />
+  <Project Path="BlazorDesktop/BlazorDesktop.csproj" Id="eb2a3a03-2562-44d2-af4b-f18a6012061b">
+    <Deploy Solution="Debug|*" />
+  </Project>
+</Solution>

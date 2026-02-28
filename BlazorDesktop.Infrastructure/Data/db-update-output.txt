@@ -1,0 +1,355 @@
+PS C:\Users\boyer\Repos\Examples\BlazorDesktop\BlazorDesktop.Infrastructure> dotnet ef database update --verbose
+Using project 'C:\Users\boyer\Repos\Examples\BlazorDesktop\BlazorDesktop.Infrastructure\BlazorDesktop.Infrastructure.csproj'.
+Using startup project 'C:\Users\boyer\Repos\Examples\BlazorDesktop\BlazorDesktop.Infrastructure\BlazorDesktop.Infrastructure.csproj'.
+dotnet msbuild /getProperty:ProjectName /getProperty:AssemblyName /getProperty:DesignAssembly /getProperty:Language /getProperty:OutputPath /getProperty:PlatformTarget /getProperty:ProjectAssetsFile /getProperty:ProjectDir /getProperty:RootNamespace /getProperty:RuntimeFrameworkVersion /getProperty:TargetFileName /getProperty:TargetFrameworkMoniker /getProperty:Nullable /getProperty:TargetFramework /getProperty:TargetPlatformIdentifier /getProperty:Platform /t:ResolvePackageAssets /getItem:RuntimeCopyLocalItems C:\Users\boyer\Repos\Examples\BlazorDesktop\BlazorDesktop.Infrastructure\BlazorDesktop.Infrastructure.csproj
+dotnet msbuild /getProperty:ProjectName /getProperty:AssemblyName /getProperty:DesignAssembly /getProperty:Language /getProperty:OutputPath /getProperty:PlatformTarget /getProperty:ProjectAssetsFile /getProperty:ProjectDir /getProperty:RootNamespace /getProperty:RuntimeFrameworkVersion /getProperty:TargetFileName /getProperty:TargetFrameworkMoniker /getProperty:Nullable /getProperty:TargetFramework /getProperty:TargetPlatformIdentifier /getProperty:Platform /t:ResolvePackageAssets /getItem:RuntimeCopyLocalItems C:\Users\boyer\Repos\Examples\BlazorDesktop\BlazorDesktop.Infrastructure\BlazorDesktop.Infrastructure.csproj
+Build started...
+dotnet build C:\Users\boyer\Repos\Examples\BlazorDesktop\BlazorDesktop.Infrastructure\BlazorDesktop.Infrastructure.csproj /verbosity:quiet /nologo /p:PublishAot=false
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.12
+
+Build succeeded.
+dotnet exec --depsfile C:\Users\boyer\Repos\Examples\BlazorDesktop\BlazorDesktop.Infrastructure\bin\Debug\net10.0\BlazorDesktop.Infrastructure.deps.json --additionalprobingpath C:\Users\boyer\.nuget\packages --additionalprobingpath "C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages" --runtimeconfig C:\Users\boyer\Repos\Examples\BlazorDesktop\BlazorDesktop.Infrastructure\bin\Debug\net10.0\BlazorDesktop.Infrastructure.runtimeconfig.json C:\Users\boyer\.dotnet\tools\.store\dotnet-ef\10.0.3\dotnet-ef\10.0.3\tools\net8.0\any\tools\net8.0\any\ef.dll database update --assembly C:\Users\boyer\Repos\Examples\BlazorDesktop\BlazorDesktop.Infrastructure\bin\Debug\net10.0\BlazorDesktop.Infrastructure.dll --project C:\Users\boyer\Repos\Examples\BlazorDesktop\BlazorDesktop.Infrastructure\BlazorDesktop.Infrastructure.csproj --startup-assembly C:\Users\boyer\Repos\Examples\BlazorDesktop\BlazorDesktop.Infrastructure\bin\Debug\net10.0\BlazorDesktop.Infrastructure.dll --startup-project C:\Users\boyer\Repos\Examples\BlazorDesktop\BlazorDesktop.Infrastructure\BlazorDesktop.Infrastructure.csproj --project-dir C:\Users\boyer\Repos\Examples\BlazorDesktop\BlazorDesktop.Infrastructure\ --root-namespace BlazorDesktop.Infrastructure --language C# --framework net10.0 --design-assembly C:\Users\boyer\.nuget\packages\microsoft.entityframeworkcore.design\10.0.3\lib\net10.0\Microsoft.EntityFrameworkCore.Design.dll --nullable --working-dir C:\Users\boyer\Repos\Examples\BlazorDesktop\BlazorDesktop.Infrastructure --verbose
+Using assembly 'BlazorDesktop.Infrastructure'.
+Using startup assembly 'BlazorDesktop.Infrastructure'.
+Using application base 'C:\Users\boyer\Repos\Examples\BlazorDesktop\BlazorDesktop.Infrastructure\bin\Debug\net10.0'.
+Using working directory 'C:\Users\boyer\Repos\Examples\BlazorDesktop\BlazorDesktop.Infrastructure'.
+Using root namespace 'BlazorDesktop.Infrastructure'.
+Using project directory 'C:\Users\boyer\Repos\Examples\BlazorDesktop\BlazorDesktop.Infrastructure\'.
+Remaining arguments: .
+Finding DbContext classes...
+Using environment 'Development'.
+Finding IDesignTimeDbContextFactory implementations...
+Found IDesignTimeDbContextFactory implementation 'BlazorDesktopDbContextFactory'.
+Found DbContext 'BlazorDesktopContext'.
+Finding DbContext classes in the project...
+Using DbContext factory 'BlazorDesktopDbContextFactory'.
+Using context 'BlazorDesktopContext'.
+Finding design-time services referenced by assembly 'BlazorDesktop.Infrastructure'...
+Finding design-time services referenced by assembly 'BlazorDesktop.Infrastructure'...
+No referenced design-time services were found.
+Finding design-time services for provider 'Microsoft.EntityFrameworkCore.Sqlite'...
+Using design-time services from provider 'Microsoft.EntityFrameworkCore.Sqlite'.
+Finding IDesignTimeServices implementations in assembly 'BlazorDesktop.Infrastructure'...
+No design-time services were found.
+Creating DbConnection.
+Created DbConnection. (7ms).
+Migrating using database 'main' on server ''.
+Creating DbConnection.
+Created DbConnection. (2ms).
+Opening connection to database 'main' on server ''.
+Opened connection to database 'main' on server ''.
+Disposing connection to database 'main' on server ''.
+Disposed connection to database 'main' on server '' (2ms).
+Opening connection to database 'main' on server ''.
+Opened connection to database 'main' on server ''.
+Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+Creating DbCommand for 'ExecuteScalar'.
+Created DbCommand for 'ExecuteScalar' (4ms).
+Initialized DbCommand for 'ExecuteScalar' (7ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsLock" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK___EFMigrationsLock" PRIMARY KEY,
+    "Timestamp" TEXT NOT NULL
+);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsLock" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK___EFMigrationsLock" PRIMARY KEY,
+    "Timestamp" TEXT NOT NULL
+);
+Creating DbCommand for 'ExecuteScalar'.
+Created DbCommand for 'ExecuteScalar' (0ms).
+Initialized DbCommand for 'ExecuteScalar' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2026-02-28 03:31:58.4927636+00:00');
+SELECT changes();
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2026-02-28 03:31:58.4927636+00:00');
+SELECT changes();
+Beginning transaction with isolation level 'Unspecified'.
+Began transaction with isolation level 'Serializable'.
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (1ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+Committing transaction.
+Committed transaction.
+Disposing transaction.
+Beginning transaction with isolation level 'Unspecified'.
+Began transaction with isolation level 'Serializable'.
+Creating DbConnection.
+Created DbConnection. (0ms).
+Opening connection to database 'main' on server ''.
+Opened connection to database 'main' on server ''.
+Disposing connection to database 'main' on server ''.
+Disposed connection to database 'main' on server '' (0ms).
+Creating DbCommand for 'ExecuteScalar'.
+Created DbCommand for 'ExecuteScalar' (0ms).
+Initialized DbCommand for 'ExecuteScalar' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+Creating DbCommand for 'ExecuteReader'.
+Created DbCommand for 'ExecuteReader' (0ms).
+Initialized DbCommand for 'ExecuteReader' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+Closing data reader to 'main' on server ''.
+A data reader for 'main' on server '' is being disposed after spending 1ms reading results.
+Applying migration '20260228023028_Initial'.
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "WeatherForecasts" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_WeatherForecasts" PRIMARY KEY,
+    "Date" TEXT NOT NULL,
+    "TemperatureC" INTEGER NOT NULL,
+    "Summary" TEXT NULL
+);
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "WeatherForecasts" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_WeatherForecasts" PRIMARY KEY,
+    "Date" TEXT NOT NULL,
+    "TemperatureC" INTEGER NOT NULL,
+    "Summary" TEXT NULL
+);
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20260228023028_Initial', '10.0.3');
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20260228023028_Initial', '10.0.3');
+Committing transaction.
+Committed transaction.
+Disposing transaction.
+Compiling query expression:
+'DbSet<WeatherForecast>()
+    .Any()'
+Generated query execution expression:
+'queryContext => SingleQueryingEnumerable.Create<bool>(
+    relationalQueryContext: (RelationalQueryContext)queryContext,
+    relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> 0
+        SELECT EXISTS (
+            SELECT 1
+            FROM WeatherForecasts AS w)) | Resolver: c => new RelationalCommandCache(
+        c.Dependencies.MemoryCache,
+        c.RelationalDependencies.QuerySqlGeneratorFactory,
+        c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory,
+        Projection Mapping:
+            EmptyProjectionMember -> 0
+        SELECT EXISTS (
+            SELECT 1
+            FROM WeatherForecasts AS w),
+        False,
+        MultipleParameters
+    )].GetRelationalCommandTemplate(parameters),
+    readerColumns: null,
+    shaper: (queryContext, dataReader, resultContext, resultCoordinator) =>
+    {
+        bool? value1;
+        value1 = dataReader.IsDBNull(0) ? default(bool?) : (bool?)dataReader.GetBoolean(0);
+        return (bool)value1;
+    },
+    contextType: BlazorDesktop.Infrastructure.BlazorDesktopContext,
+    standAloneStateManager: False,
+    detailedErrorsEnabled: False,
+    threadSafetyChecksEnabled: True)
+    .Single()'
+Creating DbCommand for 'ExecuteReader'.
+Created DbCommand for 'ExecuteReader' (0ms).
+Initialized DbCommand for 'ExecuteReader' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "WeatherForecasts" AS "w")
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "WeatherForecasts" AS "w")
+Closing data reader to 'main' on server ''.
+A data reader for 'main' on server '' is being disposed after spending 1ms reading results.
+Context 'BlazorDesktopContext' started tracking 'WeatherForecast' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Context 'BlazorDesktopContext' started tracking 'WeatherForecast' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Context 'BlazorDesktopContext' started tracking 'WeatherForecast' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Context 'BlazorDesktopContext' started tracking 'WeatherForecast' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Context 'BlazorDesktopContext' started tracking 'WeatherForecast' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Context 'BlazorDesktopContext' started tracking 'WeatherForecast' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Context 'BlazorDesktopContext' started tracking 'WeatherForecast' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Context 'BlazorDesktopContext' started tracking 'WeatherForecast' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Context 'BlazorDesktopContext' started tracking 'WeatherForecast' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+Context 'BlazorDesktopContext' started tracking 'WeatherForecast' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+SaveChanges starting for 'BlazorDesktopContext'.
+DetectChanges starting for 'BlazorDesktopContext'.
+DetectChanges completed for 'BlazorDesktopContext'.
+Beginning transaction with isolation level 'Unspecified'.
+Began transaction with isolation level 'Serializable'.
+Creating DbCommand for 'ExecuteReader'.
+Created DbCommand for 'ExecuteReader' (0ms).
+Initialized DbCommand for 'ExecuteReader' (1ms).
+Executing DbCommand [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Date), @p2='?' (Size = 12), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "WeatherForecasts" ("Id", "Date", "Summary", "TemperatureC")
+VALUES (@p0, @p1, @p2, @p3);
+Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Date), @p2='?' (Size = 12), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "WeatherForecasts" ("Id", "Date", "Summary", "TemperatureC")
+VALUES (@p0, @p1, @p2, @p3);
+Closing data reader to 'main' on server ''.
+A data reader for 'main' on server '' is being disposed after spending 1ms reading results.
+Creating DbCommand for 'ExecuteReader'.
+Created DbCommand for 'ExecuteReader' (0ms).
+Initialized DbCommand for 'ExecuteReader' (0ms).
+Executing DbCommand [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Date), @p2='?' (Size = 13), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "WeatherForecasts" ("Id", "Date", "Summary", "TemperatureC")
+VALUES (@p0, @p1, @p2, @p3);
+Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Date), @p2='?' (Size = 13), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "WeatherForecasts" ("Id", "Date", "Summary", "TemperatureC")
+VALUES (@p0, @p1, @p2, @p3);
+Closing data reader to 'main' on server ''.
+A data reader for 'main' on server '' is being disposed after spending 0ms reading results.
+Creating DbCommand for 'ExecuteReader'.
+Created DbCommand for 'ExecuteReader' (0ms).
+Initialized DbCommand for 'ExecuteReader' (0ms).
+Executing DbCommand [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Date), @p2='?' (Size = 5), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "WeatherForecasts" ("Id", "Date", "Summary", "TemperatureC")
+VALUES (@p0, @p1, @p2, @p3);
+Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Date), @p2='?' (Size = 5), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "WeatherForecasts" ("Id", "Date", "Summary", "TemperatureC")
+VALUES (@p0, @p1, @p2, @p3);
+Closing data reader to 'main' on server ''.
+A data reader for 'main' on server '' is being disposed after spending 0ms reading results.
+Creating DbCommand for 'ExecuteReader'.
+Created DbCommand for 'ExecuteReader' (0ms).
+Initialized DbCommand for 'ExecuteReader' (1ms).
+Executing DbCommand [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Date), @p2='?' (Size = 6), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "WeatherForecasts" ("Id", "Date", "Summary", "TemperatureC")
+VALUES (@p0, @p1, @p2, @p3);
+Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Date), @p2='?' (Size = 6), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "WeatherForecasts" ("Id", "Date", "Summary", "TemperatureC")
+VALUES (@p0, @p1, @p2, @p3);
+Closing data reader to 'main' on server ''.
+A data reader for 'main' on server '' is being disposed after spending 0ms reading results.
+Creating DbCommand for 'ExecuteReader'.
+Created DbCommand for 'ExecuteReader' (0ms).
+Initialized DbCommand for 'ExecuteReader' (0ms).
+Executing DbCommand [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Date), @p2='?' (Size = 5), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "WeatherForecasts" ("Id", "Date", "Summary", "TemperatureC")
+VALUES (@p0, @p1, @p2, @p3);
+Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Date), @p2='?' (Size = 5), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "WeatherForecasts" ("Id", "Date", "Summary", "TemperatureC")
+VALUES (@p0, @p1, @p2, @p3);
+Closing data reader to 'main' on server ''.
+A data reader for 'main' on server '' is being disposed after spending 0ms reading results.
+Creating DbCommand for 'ExecuteReader'.
+Created DbCommand for 'ExecuteReader' (0ms).
+Initialized DbCommand for 'ExecuteReader' (0ms).
+Executing DbCommand [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Date), @p2='?' (Size = 12), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "WeatherForecasts" ("Id", "Date", "Summary", "TemperatureC")
+VALUES (@p0, @p1, @p2, @p3);
+Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Date), @p2='?' (Size = 12), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "WeatherForecasts" ("Id", "Date", "Summary", "TemperatureC")
+VALUES (@p0, @p1, @p2, @p3);
+Closing data reader to 'main' on server ''.
+A data reader for 'main' on server '' is being disposed after spending 0ms reading results.
+Creating DbCommand for 'ExecuteReader'.
+Created DbCommand for 'ExecuteReader' (0ms).
+Initialized DbCommand for 'ExecuteReader' (0ms).
+Executing DbCommand [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Date), @p2='?' (Size = 7), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "WeatherForecasts" ("Id", "Date", "Summary", "TemperatureC")
+VALUES (@p0, @p1, @p2, @p3);
+Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Date), @p2='?' (Size = 7), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "WeatherForecasts" ("Id", "Date", "Summary", "TemperatureC")
+VALUES (@p0, @p1, @p2, @p3);
+Closing data reader to 'main' on server ''.
+A data reader for 'main' on server '' is being disposed after spending 0ms reading results.
+Creating DbCommand for 'ExecuteReader'.
+Created DbCommand for 'ExecuteReader' (0ms).
+Initialized DbCommand for 'ExecuteReader' (0ms).
+Executing DbCommand [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Date), @p2='?' (Size = 5), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "WeatherForecasts" ("Id", "Date", "Summary", "TemperatureC")
+VALUES (@p0, @p1, @p2, @p3);
+Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Date), @p2='?' (Size = 5), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "WeatherForecasts" ("Id", "Date", "Summary", "TemperatureC")
+VALUES (@p0, @p1, @p2, @p3);
+Closing data reader to 'main' on server ''.
+A data reader for 'main' on server '' is being disposed after spending 0ms reading results.
+Creating DbCommand for 'ExecuteReader'.
+Created DbCommand for 'ExecuteReader' (0ms).
+Initialized DbCommand for 'ExecuteReader' (0ms).
+Executing DbCommand [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Date), @p2='?' (Size = 5), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "WeatherForecasts" ("Id", "Date", "Summary", "TemperatureC")
+VALUES (@p0, @p1, @p2, @p3);
+Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Date), @p2='?' (Size = 5), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "WeatherForecasts" ("Id", "Date", "Summary", "TemperatureC")
+VALUES (@p0, @p1, @p2, @p3);
+Closing data reader to 'main' on server ''.
+A data reader for 'main' on server '' is being disposed after spending 0ms reading results.
+Creating DbCommand for 'ExecuteReader'.
+Created DbCommand for 'ExecuteReader' (0ms).
+Initialized DbCommand for 'ExecuteReader' (0ms).
+Executing DbCommand [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Date), @p2='?' (Size = 13), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "WeatherForecasts" ("Id", "Date", "Summary", "TemperatureC")
+VALUES (@p0, @p1, @p2, @p3);
+Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Date), @p2='?' (Size = 13), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "WeatherForecasts" ("Id", "Date", "Summary", "TemperatureC")
+VALUES (@p0, @p1, @p2, @p3);
+Closing data reader to 'main' on server ''.
+A data reader for 'main' on server '' is being disposed after spending 0ms reading results.
+Committing transaction.
+Committed transaction.
+Disposing transaction.
+An entity of type 'WeatherForecast' tracked by 'BlazorDesktopContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+An entity of type 'WeatherForecast' tracked by 'BlazorDesktopContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+An entity of type 'WeatherForecast' tracked by 'BlazorDesktopContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+An entity of type 'WeatherForecast' tracked by 'BlazorDesktopContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+An entity of type 'WeatherForecast' tracked by 'BlazorDesktopContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+An entity of type 'WeatherForecast' tracked by 'BlazorDesktopContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+An entity of type 'WeatherForecast' tracked by 'BlazorDesktopContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+An entity of type 'WeatherForecast' tracked by 'BlazorDesktopContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+An entity of type 'WeatherForecast' tracked by 'BlazorDesktopContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+An entity of type 'WeatherForecast' tracked by 'BlazorDesktopContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+SaveChanges completed for 'BlazorDesktopContext' with 10 entities written to the database.
+Creating DbCommand for 'ExecuteScalar'.
+Created DbCommand for 'ExecuteScalar' (0ms).
+Initialized DbCommand for 'ExecuteScalar' (1ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+Closing connection to database 'main' on server ''.
+Closed connection to database 'main' on server '' (1ms).
+'BlazorDesktopContext' disposed.
+Disposing connection to database 'main' on server ''.
+Disposed connection to database 'main' on server '' (0ms).
+Done.
