@@ -68,10 +68,9 @@ public class WeatherEffects
 		}
 	}
 
-	//we're keeping this for a parameterized call
-	//[EffectMethod(typeof(WeatherActions.FilterWeather))]
-	//public async Task GetWeatherForecasts(Fluxor.IDispatcher dispatcher)
-	//{
-	//	WeatherOrchestrator.DispatchGetWeather();
-	//}
+	[EffectMethod]
+	public async Task GetWeatherForecasts(WeatherActions.FilterWeather action, Fluxor.IDispatcher dispatcher)
+	{
+		WeatherOrchestrator.DispatchGetWeather(action.payload);
+	}
 }

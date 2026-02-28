@@ -1,4 +1,5 @@
 ﻿@page "/weather"
+@using BlazorDesktop.Components.Widgets
 @using BlazorDesktop.State;
 @inherits Fluxor.Blazor.Web.Components.FluxorComponent
 @inject Fluxor.IState<WeatherState> WeatherState
@@ -14,6 +15,7 @@
 }
 else
 {
+    <WeatherFilter />
     <table class="table">
         <thead>
             <tr>

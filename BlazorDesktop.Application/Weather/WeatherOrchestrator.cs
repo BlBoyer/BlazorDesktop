@@ -5,11 +5,14 @@ public static class WeatherOrchestrator
 	public record GetWeatherDataEvent
 	{
 		public long TimestampTicks { get; } = DateTime.UtcNow.Ticks;
+		public ForecastFilter? Filter { get; }
+		public GetWeatherDataEvent() { }
+		public GetWeatherDataEvent(ForecastFilter? filter = null) => Filter = filter;
 	}
 	public static event Action<GetWeatherDataEvent>? GetWeatherData;
-	public static void DispatchGetWeather()
+	public static void DispatchGetWeather(ForecastFilter? filter = null)
 	{
-		GetWeatherData?.Invoke(new());
+		GetWeatherData?.Invoke(new(filter));
 	}
 
 	public record PublishForecastsEvent

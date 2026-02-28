@@ -1,0 +1,26 @@
+﻿@using BlazorDesktop.State
+@inherits Fluxor.Blazor.Web.Components.FluxorComponent
+@inject Fluxor.IDispatcher Dispatcher
+
+<EditForm Model="@filter" OnValidSubmit="@ApplyFilter">
+    <label>Begin Date</label>
+    <InputDate @bind-Value="filter.From" />
+    <label>End Date</label>
+    <InputDate @bind-Value="filter.To" />
+    <label>Maximum Temp</label>
+    <InputNumber @bind-Value="filter.MaxTemperature" />
+    <label>Minimum Temp</label>
+    <InputNumber @bind-Value="filter.MinTemperature" />
+    <button type="submit">Filter Results</button>
+</EditForm>
+<p><strong>*This widget demostrates searching for data. We would normally filter state if we had all the results. Here we're hitting the database.</strong></p>
+
+
+@code {
+    private ForecastFilter filter = new();
+
+    private void ApplyFilter()
+    {
+        Dispatcher.Dispatch(new WeatherActions.FilterWeather(filter));
+    }
+}

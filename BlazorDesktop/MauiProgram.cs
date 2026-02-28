@@ -1,5 +1,4 @@
 ﻿using BlazorDesktop.Application;
-using BlazorDesktop.Application.Weather;
 using BlazorDesktop.Infrastructure;
 using Fluxor;
 using Fluxor.Blazor.Web.ReduxDevTools;
