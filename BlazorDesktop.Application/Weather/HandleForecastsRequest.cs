@@ -6,7 +6,7 @@ namespace BlazorDesktop.Application.Weather;
 public partial class WeatherSubscriber
 {
 
-	public async void ReceiveForecasts(WeatherOrchestrator.GetWeatherDataEvent @event) 
+	public async void HandleForecastsRequest(WeatherOrchestrator.ForecastsRequestedEvent @event) 
 	{
 		//we can use an out method for this also...
 		Domain.WeatherForecast[] results;
@@ -14,17 +14,10 @@ public partial class WeatherSubscriber
 		if (@event.Filter is not null)
 		{
 			//apply filter to db query
-			// use predicate to filter results
 			results = await _context.WeatherForecast.Where(ForecastsMatchFilter(@event.Filter)).ToArrayAsync();
-			// results = _context.WeatherForecast.Where(x =>
-			// 	(@event.Filter.From is null || x.Date >= @event.Filter.From) &&
-			// 	(@event.Filter.To is null || x.Date <= @event.Filter.To) &&
-			// 	(@event.Filter.MinTemperature is null || x.TemperatureC >= @event.Filter.MinTemperature) &&
-			// 	(@event.Filter.MaxTemperature is null || x.TemperatureC <= @event.Filter.MaxTemperature)
-			// );
 		}
 		else
-		{			
+		{
 			results = await _context.WeatherForecast.ToArrayAsync();
 		}
 
@@ -35,7 +28,7 @@ public partial class WeatherSubscriber
 			)).ToArray();
 
 		//dispatch event with payload
-		WeatherOrchestrator.PublishForecasts(forecasts);
+		WeatherOrchestrator.EmitForecasts(forecasts);
 	}
 
 	//create predicate for query filter

@@ -9,7 +9,7 @@ public partial class WeatherSubscriber
 	public WeatherSubscriber(BlazorDesktopContext context)
 	{
 		_context = context;
-		WeatherOrchestrator.GetWeatherData += ReceiveForecasts;
+		WeatherOrchestrator.ForecastsRequested += HandleForecastsRequest;
 	}
 
 }

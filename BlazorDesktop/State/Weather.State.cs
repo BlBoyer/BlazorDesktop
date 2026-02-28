@@ -49,10 +49,10 @@ public class WeatherEffects
 		_state = state;
 
 		// Subscribe to orchestrator events
-		WeatherOrchestrator.PublishForecastsRequested += OnWeatherReceived;
+		WeatherOrchestrator.ForecastsEmitted += OnForecastsReceived;
 	}
 
-	private void OnWeatherReceived(PublishForecastsEvent @event)
+	private void OnForecastsReceived(ForecastsEmittedEvent @event)
 	{
 		// Dispatch to Fluxor state store
 		_dispatcher.Dispatch(new WeatherActions.SetForecasts(@event.Forecasts));
@@ -63,7 +63,7 @@ public class WeatherEffects
 	{
 		if (_state.Value.Forecasts?.Length == 0)
 		{
-			WeatherOrchestrator.DispatchGetWeather();
+			WeatherOrchestrator.RequestForecasts();
 			//set state isLoading to true when needed
 		}
 	}
@@ -71,6 +71,6 @@ public class WeatherEffects
 	[EffectMethod]
 	public async Task GetWeatherForecasts(WeatherActions.FilterWeather action, Fluxor.IDispatcher dispatcher)
 	{
-		WeatherOrchestrator.DispatchGetWeather(action.payload);
+		WeatherOrchestrator.RequestForecasts(action.payload);
 	}
 }
