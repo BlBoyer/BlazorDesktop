@@ -2,10 +2,8 @@
 namespace BlazorDesktop.Testing;
 
 using BlazorDesktop.Application.Weather;
-using BlazorDesktop.Domain;
 using BlazorDesktop.Infrastructure;
 using Microsoft.EntityFrameworkCore;
-using System;
 using TUnit;
 using static BlazorDesktop.Application.Weather.WeatherOrchestrator;
 
@@ -25,14 +23,10 @@ public class WeatherOrchestratorTests
 
 		BlazorDesktopContext context = Data.InMemoryDb.CreateInMemoryDb();
 
-		// Create a minimal subscriber instance
 		var subscriber = new WeatherSubscriber(context);
 
-		var payload = new Domain.WeatherForecast[]
-		{
-			new (){ Date = new DateOnly(), TemperatureC = 19, Summary = "Rainy" },
-			new (){ Date = new DateOnly(), TemperatureC = 10, Summary = "Snowy" }
-		};
+		var payload = DataGeneration.WeatherGeneratorConfigurations.GenerateRandomForecasts(2);
+
 		var applicationForecasts = payload.Select(x => new Application.Weather.WeatherForecast(x.Date, x.TemperatureC, x.Summary)).ToArray();
 
 		context.WeatherForecast.AddRange(payload);

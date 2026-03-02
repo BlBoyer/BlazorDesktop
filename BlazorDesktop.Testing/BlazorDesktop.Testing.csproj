@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BlazorDesktop.Application\BlazorDesktop.Application.csproj" />
+    <ProjectReference Include="..\BlazorDesktop.DataGeneration\BlazorDesktop.DataGeneration.csproj" />
     <ProjectReference Include="..\BlazorDesktop.Domain\BlazorDesktop.Domain.csproj" />
     <ProjectReference Include="..\BlazorDesktop.Infrastructure\BlazorDesktop.Infrastructure.csproj" />
   </ItemGroup>
