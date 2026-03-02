@@ -1,11 +1,8 @@
-﻿
-namespace BlazorDesktop.Testing;
-
-using BlazorDesktop.Application.Weather;
+﻿using BlazorDesktop.Application.Weather;
 using BlazorDesktop.Infrastructure;
-using Microsoft.EntityFrameworkCore;
-using TUnit;
 using static BlazorDesktop.Application.Weather.WeatherOrchestrator;
+
+namespace BlazorDesktop.Testing;
 
 public class WeatherOrchestratorTests
 {
