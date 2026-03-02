@@ -1,6 +1,7 @@
 <Solution>
   <Project Path="BlazorDesktop.Application/BlazorDesktop.Application.csproj" Id="b40e2b63-6926-49e5-8537-ac71dc5d5c14" />
   <Project Path="BlazorDesktop.DataGeneration/BlazorDesktop.DataGeneration.csproj" Id="aa13d1fb-19a1-4f29-b070-f913d54f4dd8" />
+  <Project Path="BlazorDesktop.DataGenerator/BlazorDesktop.DataGenerator.csproj" Id="3e2cf925-7794-4f17-9625-28c7428c43be" />
   <Project Path="BlazorDesktop.Domain/BlazorDesktop.Domain.csproj" Id="f869f9bf-ccd7-4d17-a7da-705153693adb" />
   <Project Path="BlazorDesktop.Infrastructure/BlazorDesktop.Infrastructure.csproj" Id="fb598641-7ef2-477f-9a88-7a59dd8b895f" />
   <Project Path="BlazorDesktop.Testing/BlazorDesktop.Testing.csproj" />
