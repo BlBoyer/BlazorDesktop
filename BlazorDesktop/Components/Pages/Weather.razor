@@ -46,6 +46,6 @@ else
     {
         //ask state for weather reports
         Dispatcher.Dispatch(new WeatherActions.LoadWeather());
-        //await base.OnInitializedAsync();
+        await base.OnInitializedAsync();
     }
 }
