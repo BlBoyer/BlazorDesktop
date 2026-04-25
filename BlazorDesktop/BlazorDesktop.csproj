@@ -28,29 +28,34 @@
                <MauiXaml Update="MyPage.xaml" Inflator="Runtime" /> (force runtime inflation) -->
         <MauiXamlInflator>SourceGen</MauiXamlInflator>
 
-        <!-- Display name -->
-        <ApplicationTitle>BlazorDesktop</ApplicationTitle>
+	  <WindowsPackageType Condition="$(Configuration)=='Debug'">None</WindowsPackageType>
 
-        <!-- App Identifier -->
-        <ApplicationId>com.companyname.blazordesktop</ApplicationId>
-
-        <!-- Versions -->
-        <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
-        <ApplicationVersion>1</ApplicationVersion>
-
-        <!-- To develop, package, and publish an app to the Microsoft Store, see: https://aka.ms/MauiTemplateUnpackaged -->
-        <WindowsPackageType>MSIX</WindowsPackageType>
-
-        <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.0</SupportedOSPlatformVersion>
+	  <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.0</SupportedOSPlatformVersion>
         <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">15.0</SupportedOSPlatformVersion>
         <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">24.0</SupportedOSPlatformVersion>
         <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
         <TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<UserSecretsId>9a1e3a16-7887-43e5-a565-9733a31321ca</UserSecretsId>
-	    <DefaultLanguage>en-us</DefaultLanguage>
-	    <PackageCertificateThumbprint>532E880A4F7EFB7DF9FA44B683B1C2CC810D0368</PackageCertificateThumbprint>
-	    <PackageCertificateKeyFile>BlazorDesktop_TemporaryKey.pfx</PackageCertificateKeyFile>
-	    <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
+
+    </PropertyGroup>
+
+    <PropertyGroup Condition="$(Configuration)=='Release'">
+	  <!-- Display name -->
+	  <ApplicationTitle>BlazorDesktop</ApplicationTitle>
+
+	  <!-- App Identifier -->
+	  <ApplicationId>com.companyname.blazordesktop</ApplicationId>
+
+	  <!-- Versions -->
+	  <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+	  <ApplicationVersion>1</ApplicationVersion>
+
+	  <!-- To develop, package, and publish an app to the Microsoft Store, see: https://aka.ms/MauiTemplateUnpackaged -->
+	  <WindowsPackageType>MSIX</WindowsPackageType>
+	  <DefaultLanguage>en-us</DefaultLanguage>
+	  <PackageCertificateThumbprint>532E880A4F7EFB7DF9FA44B683B1C2CC810D0368</PackageCertificateThumbprint>
+	  <PackageCertificateKeyFile>BlazorDesktop_TemporaryKey.pfx</PackageCertificateKeyFile>
+	  <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
     </PropertyGroup>
 	  
     <ItemGroup>
