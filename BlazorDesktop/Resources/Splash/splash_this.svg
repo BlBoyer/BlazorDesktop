@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="456" height="456" viewBox="0 0 456 456"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background (optional, remove if you already have one) -->
+  <rect width="100%" height="100%" fill="none"/>
+
+  <!-- Text -->
+  <text x="50%" y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        font-family="Segoe UI, Arial, sans-serif"
+        font-size="48"
+        fill="#ffffff">
+    BlazorDesktop
+  </text>
+
+</svg>
