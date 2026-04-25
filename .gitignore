@@ -388,3 +388,4 @@ temp
 # TypeScript source map files (generated artifacts)
 # Note: CSS map files in templates (e.g., bootstrap) are intentionally tracked
 *.js.map
+[Dd]eployment*/
