@@ -1,5 +1,16 @@
 ﻿@page "/"
 
 <h1>Hello, world!</h1>
-
+<img src="/img/dotnet_bot.svg"/>
 Welcome to your new app.
+
+@code {
+	private Image mauilogo = new();
+
+	protected override void OnInitialized()
+	{
+		mauilogo.Source = ImageSource.FromResource("dotnet_bot.png");
+		base.OnInitialized();
+	}
+
+}
